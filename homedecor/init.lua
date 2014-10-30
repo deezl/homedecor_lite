@@ -163,7 +163,7 @@ dofile(homedecor.modpath.."/crafts.lua")
 dofile(homedecor.modpath.."/furniture.lua")
 dofile(homedecor.modpath.."/furniture_medieval.lua")
 dofile(homedecor.modpath.."/furniture_recipes.lua")
-dofile(homedecor.modpath.."/locked.lua")
+--dofile(homedecor.modpath.."/locked.lua")
 
 
 print("[HomeDecor] "..S("Loaded!"))
