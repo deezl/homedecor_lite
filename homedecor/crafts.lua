@@ -1,3 +1,5 @@
+local S = homedecor.gettext
+
 minetest.register_craftitem("homedecor:steel_wire", {
 	description = S("Spool of steel wire"),
 	inventory_image = "homedecor_steel_wire.png"
