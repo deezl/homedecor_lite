@@ -2,7 +2,7 @@
 
 local S = homedecor.gettext
 
-local counter_materials = { "", "granite", "marble", "steel" }
+local counter_materials = { "" }
 
 for _, mat in ipairs(counter_materials) do
 
