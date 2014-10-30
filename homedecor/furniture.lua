@@ -39,12 +39,6 @@ end
 
 local chaircolors = {
 	{ "", "plain" },
-	{ "black", "Black" },
-	{ "red", "Red" },
-	{ "pink", "Pink" },
-	{ "violet", "Violet" },
-	{ "blue", "Blue" },
-	{ "dark_green", "Dark Green" },
 }
 
 for i in ipairs(chaircolors) do
@@ -88,47 +82,7 @@ for i in ipairs(chaircolors) do
 		groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 	})
 
-	if color ~= "" then 
-		minetest.register_node("homedecor:armchair"..color, {
-			description = S("Armchair (%s)"):format(name),
-			tiles = { "forniture_armchair_top"..color..".png" },
-			drawtype = "nodebox",
-			sunlight_propagates = true,
-			paramtype = "light",
-			paramtype2 = "facedir",
-			node_box = {
-			type = "fixed",
-			fixed = {
-				{ -0.50, -0.50, -0.45, -0.30,  0.05,  0.30 },
-				{ -0.45, -0.50, -0.50, -0.35,  0.05, -0.45 },
-				{ -0.45,  0.05, -0.45, -0.35,  0.10,  0.15 },
-				{  0.30, -0.50, -0.45,  0.50,  0.05,  0.30 },
-				{  0.35, -0.50, -0.50,  0.45,  0.05, -0.45 },
-				{  0.35,  0.05, -0.45,  0.45,  0.10,  0.15 },
-				{ -0.50, -0.50,  0.30,  0.50,  0.45,  0.50 },
-				{ -0.45,  0.45,  0.35,  0.45,  0.50,  0.45 },
-				{ -0.30, -0.45, -0.35,  0.30, -0.10,  0.30 },
-				{ -0.30, -0.45, -0.40,  0.30, -0.15, -0.35 },
-				{ -0.50,  0.05,  0.15, -0.30,  0.45,  0.30 },
-				{ -0.45,  0.10,  0.10, -0.35,  0.45,  0.15 },
-				{ -0.45,  0.45,  0.15, -0.35,  0.50,  0.35 },
-				{  0.30,  0.05,  0.15,  0.50,  0.45,  0.30 },
-				{  0.35,  0.10,  0.10,  0.45,  0.45,  0.15 },
-				{  0.35,  0.45,  0.15,  0.45,  0.50,  0.35 },
-			},
-			},
-			groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
-		})
-
-		minetest.register_craft({
-			output = "homedecor:armchair"..color.." 2",
-			recipe = {
-			{ "wool:"..color2,""},
-			{ "group:wood","group:wood" },
-			{ "wool:"..color2,"wool:"..color2 },
-			},
-		})
-	end
+	
 end
 
 local repl = { off="low", low="med", med="hi", hi="max", max="off", }
@@ -240,16 +194,7 @@ minetest.register_node(":homedecor:openframe_bookshelf", {
 	}
 })
 
-local bedcolors = {
-	"red",
-	"green",
-	"blue",
-	"violet",
-	"brown",
-        "darkgrey",
-        "orange",
-        "yellow",
-        "pink",
+local bedcolors = {"darkgrey",
 }
 
 for _, color in ipairs(bedcolors) do
@@ -345,202 +290,6 @@ for _, color in ipairs(bedcolors) do
 end
 
 
-
-minetest.register_node("homedecor:simple_bench", {
-	tiles = {
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_bench_large_2_left_back.png",
-		"homedecor_bench_large_2_left_front.png"
-	},
-	description = "Simple Bench",
-	drawtype = "nodebox",
-	paramtype = "light",
-        paramtype2 = "facedir",
-        groups = {snappy=3},
-	node_box = {
-		type = "fixed",
-		fixed = {
-                    {-0.5, -0.15, 0,  0.5,  -0.05, 0.4},
-                    {-0.4, -0.5,  0.1, -0.3, -0.15, 0.3},
-                    { 0.3, -0.5,  0.1,  0.4, -0.15, 0.3},
-	}
-	},
-})
-
-
-minetest.register_node("homedecor:bench_large_1_left", {
-	description = "Garden Bench (style 1)",
-	tiles = {
-		"homedecor_bench_large_1_left_top.png",
-		"homedecor_bench_large_1_left_bottom.png",
-		"homedecor_bench_large_1_ends.png^[transformFX",
-		"homedecor_bench_large_1_ends.png",
-		"homedecor_bench_large_1_left_back.png",
-		"homedecor_bench_large_1_left_front.png"
-	},
-	inventory_image = "homedecor_bench_large_1_inv.png",
-	drawtype = "nodebox",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {snappy=3},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, 0.25, 0.375, 0.5, 0.4375, 0.4375}, -- NodeBox1
-			{-0.5, 0, 0.375, 0.5, 0.1875, 0.4375}, -- NodeBox2
-			{-0.5, -0.125, 0.115, 0.5, -0.0625, 0.35}, -- NodeBox3
-			{-0.5, -0.125, -0.0872, 0.5, -0.0625, 0.079}, -- NodeBox4
-			{-0.3125, -0.5, 0.4375, -0.25, 0.375, 0.5}, -- NodeBox5
-			{-0.3125, -0.25, -0.0625, -0.25, -0.125, 0.4375}, -- NodeBox6
-			{-0.3125, -0.5, -0.0625, -0.25, -0.25, 0}, -- NodeBox7
-		}
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = { -0.5, -0.5, -0.09375, 1.5, 0.5, 0.5 }
-	},
-	on_place = function(itemstack, placer, pointed_thing)
-		return homedecor.stack_sideways(itemstack, placer, pointed_thing,
-			"homedecor:bench_large_1_left", "homedecor:bench_large_1_right", true)
-	end,
-	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		local fdir = oldnode.param2
-		if not fdir or fdir > 3 then return end
-		local pos2 = { x = pos.x + homedecor.fdir_to_right[fdir+1][1], y=pos.y, z = pos.z + homedecor.fdir_to_right[fdir+1][2] }
-		if minetest.get_node(pos2).name == "homedecor:bench_large_1_right" then
-			minetest.remove_node(pos2)
-		end
-	end
-})
-
-minetest.register_node("homedecor:bench_large_1_right", {
-	tiles = {
-		"homedecor_bench_large_1_right_top.png",
-		"homedecor_bench_large_1_right_bottom.png",
-		"homedecor_bench_large_1_ends.png^[transformFX",
-		"homedecor_bench_large_1_ends.png",
-		"homedecor_bench_large_1_right_back.png",
-		"homedecor_bench_large_1_right_front.png"
-	},
-	drawtype = "nodebox",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {snappy=3},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, 0.25, 0.375, 0.5, 0.4375, 0.4375}, -- NodeBox1
-			{-0.5, 0, 0.375, 0.5, 0.1875, 0.4375}, -- NodeBox2
-			{-0.5, -0.125, 0.115, 0.5, -0.0625, 0.35}, -- NodeBox3
-			{-0.5, -0.125, -0.0872, 0.5, -0.0625, 0.079}, -- NodeBox4
-			{0.25, -0.5, 0.4375, 0.3125, 0.375, 0.5}, -- NodeBox5
-			{0.25, -0.25, -0.0625, 0.3125, -0.125, 0.5}, -- NodeBox6
-			{0.25, -0.5, -0.0625, 0.3125, -0.25, 0}, -- NodeBox7
-		}
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = { 0, 0, 0, 0, 0, 0 }
-	},
-})
-
-
-minetest.register_node("homedecor:bench_large_2_left", {
-	description = "Garden Bench (style 2)",
-	tiles = {
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_bench_large_2_left_back.png",
-		"homedecor_bench_large_2_left_front.png"
-	},
-	inventory_image = "homedecor_bench_large_2_inv.png",
-	drawtype = "nodebox",
-	paramtype = "light",
-        paramtype2 = "facedir",
-	groups = {snappy=3},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, 0.375, -0.375, 0.5, 0.5}, -- NodeBox1
-			{-0.375, 0.3125, 0.4375, 0.5, 0.4375, 0.5}, -- NodeBox2
-			{-0.375, -0.0625, 0.4375, 0.5, 0.0625, 0.5}, -- NodeBox3
-			{-0.3125, 0.0625, 0.45, -0.25, 0.3125, 0.48}, -- NodeBox4
-			{-0.1875, 0.0625, 0.45, -0.125, 0.3125, 0.48}, -- NodeBox5
-			{-0.0625, 0.0625, 0.45, 0, 0.3125, 0.48}, -- NodeBox6
-			{0.0625, 0.0625, 0.45, 0.125, 0.3125, 0.48}, -- NodeBox7
-			{0.1875, 0.0625, 0.45, 0.25, 0.3125, 0.48}, -- NodeBox8
-			{0.3125, 0.0625, 0.45, 0.375, 0.3125, 0.48}, -- NodeBox9
-			{0.4375, 0.0625, 0.45, 0.5, 0.3125, 0.48}, -- NodeBox10
-			{-0.5, 0.0625, -0.145362, -0.375, 0.125, 0.375}, -- NodeBox11
-			{-0.5, -0.5, -0.0625, -0.375, 0.0625, 0.0625}, -- NodeBox12
-			{-0.4375, -0.125, -0.0625, 0.5, -0.0911603, 0.4375}, -- NodeBox13
-			{-0.4375, -0.4375, 0.0625, -0.375, -0.3125, 0.375}, -- NodeBox14
-			{-0.375, -0.342324, 0.25, 0.5, -0.4375, 0.1875}, -- NodeBox15
-			{-0.5, -0.25, -0.0290173, 0.5, -0.125, 0.0125346}, -- NodeBox16
-		}
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = { -0.5, -0.5, -0.15625, 1.5, 0.5, 0.5 }
-	},
-	on_place = function(itemstack, placer, pointed_thing)
-		return homedecor.stack_sideways(itemstack, placer, pointed_thing,
-			"homedecor:bench_large_2_left", "homedecor:bench_large_2_right", true)
-	end,
-	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		local fdir = oldnode.param2
-		if not fdir or fdir > 3 then return end
-		local pos2 = { x = pos.x + homedecor.fdir_to_right[fdir+1][1], y=pos.y, z = pos.z + homedecor.fdir_to_right[fdir+1][2] }
-		if minetest.get_node(pos2).name == "homedecor:bench_large_2_right" then
-			minetest.remove_node(pos2)
-		end
-	end
-})
-
-minetest.register_node("homedecor:bench_large_2_right", {
-	tiles = {
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_generic_wood.png",
-		"homedecor_bench_large_2_right_back.png",
-		"homedecor_bench_large_2_right_front.png"
-	},
-	drawtype = "nodebox",
-	paramtype = "light",
-        paramtype2 = "facedir",
-	groups = {snappy=3},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5}, -- NodeBox1
-			{-0.5, 0.3125, 0.4375, 0.375, 0.4375, 0.5}, -- NodeBox2
-			{-0.5, -0.0625, 0.4375, 0.375, 0.0625, 0.5}, -- NodeBox3
-			{-0.5, 0.0625, 0.45, -0.4375, 0.3125, 0.48}, -- NodeBox4
-			{-0.375, 0.0625, 0.45, -0.3125, 0.3125, 0.48}, -- NodeBox5
-			{-0.25, 0.0625, 0.45, -0.1875, 0.3125, 0.48}, -- NodeBox6
-			{-0.125, 0.0625, 0.45, -0.0625, 0.3125, 0.48}, -- NodeBox7
-			{0, 0.0625, 0.45, 0.0625, 0.3125, 0.48}, -- NodeBox8
-			{0.125, 0.0625, 0.45, 0.1875, 0.3125, 0.48}, -- NodeBox9
-			{0.25, 0.0625, 0.45, 0.3125, 0.3125, 0.48}, -- NodeBox10
-			{0.375, 0.0625, -0.145362, 0.5, 0.125, 0.375}, -- NodeBox11
-			{0.375, -0.5, -0.0625, 0.5, 0.125, 0.0625}, -- NodeBox12
-			{0.375, -0.4375, 0.0625, 0.4375, -0.3125, 0.375}, -- NodeBox13
-			{-0.5, -0.4375, 0.1875, 0.375, -0.342324, 0.25}, -- NodeBox14
-			{-0.5, -0.125, -0.0625, 0.4375, -0.0911603, 0.4375}, -- NodeBox15
-			{-0.5, -0.25, -0.0290173, 0.5, -0.125, 0.0125346}, -- NodeBox16
-		}
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = { 0, 0, 0, 0, 0, 0 }
-	},
-})
 
 
 
