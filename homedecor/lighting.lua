@@ -1,4 +1,5 @@
 --glow lights removed, kept lattice lanterns
+local S = homedecor.gettext
  
 minetest.register_node('homedecor:lattice_lantern_large', {
 	description = S("Lattice lantern (large)"),
