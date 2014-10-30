@@ -293,8 +293,8 @@ end
 
 -- Gates
 
-local gates_list = { "picket", "picket_white", "barbed_wire", "chainlink" }
-local gate_names = { "Unpainted Picket", "White Picket", "Barbed Wire", "Chainlink" }
+local gates_list = { "barbed_wire", "chainlink" }
+local gate_names = { "Barbed Wire", "Chainlink" }
 
 local gate_models_closed = {
 	{{ -0.5, -0.5, 0.498, 0.5, 0.5, 0.498 }},
