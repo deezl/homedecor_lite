@@ -293,8 +293,8 @@ end
 
 -- Gates
 
-local gates_list = { "barbed_wire", "chainlink" }
-local gate_names = { "Barbed Wire", "Chainlink" }
+local gates_list = { "chainlink" }
+local gate_names = { "Chainlink" }
 
 local gate_models_closed = {
 	{{ -0.5, -0.5, 0.498, 0.5, 0.5, 0.498 }},
@@ -401,8 +401,8 @@ for i in ipairs(gates_list) do
 	minetest.register_node("homedecor:gate_"..gate.."_open", def)
 end
 
-minetest.register_alias("homedecor:fence_barbed_wire_gate_open",    "homedecor:gate_barbed_wire_open")
-minetest.register_alias("homedecor:fence_barbed_wire_gate_closed",  "homedecor:gate_barbed_wire_closed")
+--minetest.register_alias("homedecor:fence_barbed_wire_gate_open",    "homedecor:gate_barbed_wire_open")
+--minetest.register_alias("homedecor:fence_barbed_wire_gate_closed",  "homedecor:gate_barbed_wire_closed")
 minetest.register_alias("homedecor:fence_chainlink_gate_open",      "homedecor:gate_chainlink_open")
 minetest.register_alias("homedecor:fence_chainlink_gate_closed",    "homedecor:gate_chainlink_closed")
 minetest.register_alias("homedecor:fence_picket_gate_open",         "homedecor:gate_picket_open")

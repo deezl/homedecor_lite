@@ -83,10 +83,9 @@ for i in ipairs(chaircolors) do
 	})
 
 	
-<<<<<<< HEAD
-=======
+
 end
->>>>>>> 213da2d245465c3bc1313cf42effb655d1ff08d0
+
 
 local repl = { off="low", low="med", med="hi", hi="max", max="off", }
 local lamp_colors = { "", "blue", "green", "pink", "red", "violet" }
@@ -300,7 +299,7 @@ end
 
 minetest.register_alias("3dforniture:table", "homedecor:table")
 minetest.register_alias("3dforniture:chair", "homedecor:chair")
-minetest.register_alias("3dforniture:armchair", "homedecor:armchair_black")
+--minetest.register_alias("3dforniture:armchair", "homedecor:armchair_black")
 minetest.register_alias("homedecor:armchair", "homedecor:armchair_black")
 
 minetest.register_alias('table', 'homedecor:table')
