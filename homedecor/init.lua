@@ -148,46 +148,22 @@ end
 
 -- load various other components
 
---dofile(homedecor.modpath.."/misc-nodes.lua")					-- the catch-all for all misc nodes
+					-- the catch-all for all misc nodes
 dofile(homedecor.modpath.."/tables.lua")
---dofile(homedecor.modpath.."/electronics.lua")
 dofile(homedecor.modpath.."/shutters.lua")
-dofile(homedecor.modpath.."/shingles.lua")
+dofile(homedecor.modpath.."/shingels.lua")
 dofile(homedecor.modpath.."/slopes.lua")
-
 dofile(homedecor.modpath.."/door_models.lua")
 dofile(homedecor.modpath.."/doors_and_gates.lua")
-
 dofile(homedecor.modpath.."/fences.lua")
-
 dofile(homedecor.modpath.."/lighting.lua")
 dofile(homedecor.modpath.."/kitchen_cabinet.lua")
 dofile(homedecor.modpath.."/refrigerator.lua")
-
---dofile(homedecor.modpath.."/misc-bathroom.lua")
-
---dofile(homedecor.modpath.."/laundry.lua")
-
---dofile(homedecor.modpath.."/furnaces.lua")
---dofile(homedecor.modpath.."/nightstands.lua")
---dofile(homedecor.modpath.."/clocks.lua")
---dofile(homedecor.modpath.."/misc-electrical.lua")
-
---dofile(homedecor.modpath.."/paintings.lua")
---dofile(homedecor.modpath.."/window_treatments.lua")
-
 dofile(homedecor.modpath.."/crafts.lua")
-
 dofile(homedecor.modpath.."/furniture.lua")
 dofile(homedecor.modpath.."/furniture_medieval.lua")
---dofile(homedecor.modpath.."/furniture_bathroom.lua")
 dofile(homedecor.modpath.."/furniture_recipes.lua")
---dofile(homedecor.modpath.."/climate-control.lua")
-
---dofile(homedecor.modpath.."/cobweb.lua")
-
 dofile(homedecor.modpath.."/locked.lua")
-
 
 
 print("[HomeDecor] "..S("Loaded!"))
