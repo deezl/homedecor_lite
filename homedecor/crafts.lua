@@ -36,6 +36,14 @@ minetest.register_craft({
         recipe = "homedecor:parrafin",
 })
 
+minetest.register_craft( {
+	output = "homedecor:openframe_bookshelf",
+	recipe = {
+			{"group:wood", "", "group:wood"},
+			{"default:book", "default:book", "default:book"},
+			{"group:wood", "", "group:wood"},
+	},
+})
 
 
 -- wood-lattice lamps
