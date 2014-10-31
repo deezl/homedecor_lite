@@ -1,3 +1,4 @@
+local S = homedecor.gettext
  
 minetest.register_node("homedecor:shingles_wood", {
 description = S("Wood Shingles"),

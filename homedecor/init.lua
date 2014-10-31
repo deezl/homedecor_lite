@@ -151,7 +151,7 @@ end
 					-- the catch-all for all misc nodes
 dofile(homedecor.modpath.."/tables.lua")
 dofile(homedecor.modpath.."/shutters.lua")
-dofile(homedecor.modpath.."/shingels.lua")
+dofile(homedecor.modpath.."/shingles.lua")
 dofile(homedecor.modpath.."/slopes.lua")
 dofile(homedecor.modpath.."/door_models.lua")
 dofile(homedecor.modpath.."/doors_and_gates.lua")
