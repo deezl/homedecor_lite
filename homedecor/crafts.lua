@@ -824,6 +824,15 @@ minetest.register_craft( {
         },
 })
 
+minetest.register_craft( {
+output = "homedecor:door_woodglass_bottom_left",
+recipe = {
+{ "default:wood", "default:glass", "" },
+{ "default:wood", "default:glass", "default:steel_ingot" },
+{ "default:wood", "default:wood", "" },
+},
+})
+
 --desk
 
 minetest.register_craftitem("homedecor:drawer_small", {
