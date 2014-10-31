@@ -85,7 +85,7 @@ minetest.register_craft({
 	output = 'fake_fire:smokeless_chimney_top_stone',
 	recipe = {
 			"default:torch",
-			"stairs:slab_stone",
+			"default:stone",
 	}
 })
 
@@ -97,7 +97,7 @@ minetest.register_craft({
 	output = 'fake_fire:smokeless_chimney_top_sandstone',
 	recipe = {
 			"default:torch",
-			"stairs:slab_sandstone",
+			"default:sandstone",
 	}
 })
 

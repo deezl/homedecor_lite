@@ -505,7 +505,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "homedecor:refrigerator_steel_bottom",
 	recipe = {
-		{"default:steel_ingot", "homedecor:glowlight_small_cube_white", "default:steel_ingot", },
+		{"default:steel_ingot", "default:mese_crystal", "default:steel_ingot", },
 		{"default:steel_ingot", "default:copperblock", "default:steel_ingot", },
 		{"default:steel_ingot", "default:clay", "default:steel_ingot", },
 	}
@@ -815,6 +815,19 @@ minetest.register_craft( {
 })
 
 --desk
+
+minetest.register_craftitem("homedecor:drawer_small", {
+description = S("Small Wooden Drawer"),
+inventory_image = "homedecor_drawer_small.png",
+})
+
+minetest.register_craft( {
+output = "homedecor:drawer_small",
+recipe = {
+{ "group:wood", "default:steel_ingot", "group:wood" },
+},
+})
+
 
 minetest.register_craft({
     output = "homedecor:desk",
