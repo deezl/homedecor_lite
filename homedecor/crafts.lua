@@ -778,6 +778,16 @@ minetest.register_craft( {
         },
 })
 
+minetest.register_craft( {
+output = "homedecor:door_wrought_iron_bottom_left 2",
+recipe = {
+{ "default:glass", "default:iron_lump" },
+{ "default:glass", "default:iron_lump" },
+{ "default:glass", "default:iron_lump" }
+},
+})
+
+
 -- Closet doors
 
 -- oak
