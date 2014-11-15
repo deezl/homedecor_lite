@@ -52,8 +52,8 @@ minetest.register_craft( {
         output = "homedecor:lattice_lantern_large 2",
         recipe = {
 			{ "dye:black", "dye:yellow", "dye:black" },
-			{ "group:stick", "building_blocks:woodglass", "group:stick" },
-			{ "group:stick", "homedecor:power_crystal", "group:stick" }
+			{ "group:stick", "default:glass", "group:stick" },
+			{ "group:stick", "default:torch", "group:stick" }
         },
 })
 
