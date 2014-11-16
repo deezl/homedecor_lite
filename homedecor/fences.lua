@@ -52,6 +52,28 @@ minetest.register_node("homedecor:fence_wrought_iron_with_sign", {
 	},
 })
 
+minetest.register_node("homedecor:pole_wrought_iron", {
+	description = S("Wrought Iron Pole"),
+	drawtype = "nodebox",
+	tiles = {"homedecor_tile_wrought_iron2.png"},
+	inventory_image = "homedecor_pole_wrought_iron.png",
+	wield_image = "homedecor_pole_wrought_iron.png",
+	paramtype = "light",
+		paramtype2 = "facedir",
+	is_ground_content = true,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625}
+	},
+	node_box = {
+		type = "fixed",
+		fixed = {-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625}
+	},
+	groups = {snappy=3},
+	sounds = default.node_sound_wood_defaults(),
+	walkable = true,
+})
+
 -- other types of fences
 
 

@@ -67,6 +67,15 @@ minetest.register_craft( {
 -- benches
 
 minetest.register_craft( {
+	output = "homedecor:pole_wrought_iron 4",
+	recipe = {
+			{ "default:iron_lump", },
+			{ "default:iron_lump", },
+			{ "default:iron_lump", },
+	},
+})
+
+minetest.register_craft( {
         output = "homedecor:bench_large_1_left",
         recipe = {
 			{ "group:wood", "group:wood", "group:wood" },
